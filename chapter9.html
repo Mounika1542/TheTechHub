@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 9: Forms and Inputs in HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      margin: 20px;
+    }
+    h1, h2 {
+      color: #005580;
+    }
+    .note {
+      background-color: #e0f7fa;
+      padding: 10px;
+      border-left: 5px solid #00796b;
+      margin: 10px 0;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea, button {
+      padding: 8px;
+      width: 100%;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+    .practice {
+      background-color: #ffffff;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .resources {
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .resources ul {
+      padding-left: 20px;
+    }
+    .resources li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chapter 9: Forms and Inputs in HTML</h1>
+  <p>HTML forms are essential for gathering user input on websites. Forms can include text fields, checkboxes, radio buttons, dropdowns, and submit buttons to collect and process information.</p>
+
+  <h2>Basic Form Structure</h2>
+  <pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+  <h2>Common Input Types</h2>
+  <ul>
+    <li><code>text</code> - single-line input</li>
+    <li><code>email</code> - email address input</li>
+    <li><code>password</code> - masked input</li>
+    <li><code>radio</code> - select one option</li>
+    <li><code>checkbox</code> - select multiple options</li>
+    <li><code>submit</code> - submit the form</li>
+    <li><code>reset</code> - reset the form fields</li>
+    <li><code>tel</code> - telephone number input</li>
+    <li><code>url</code> - URL input</li>
+    <li><code>number</code> - numeric input</li>
+    <li><code>date</code> - date picker</li>
+    <li><code>color</code> - color picker</li>
+    <li><code>file</code> - file uploader</li>
+    <li><code>range</code> - slider control</li>
+    <li><code>search</code> - search field</li>
+    <li><code>textarea</code> - multi-line input</li>
+    <li><code>select</code> - dropdown menu</li>
+  </ul>
+
+  <h2>Example Form</h2>
+  <form>
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone">
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+
+    <label for="color">Favorite Color:</label>
+    <input type="color" id="color" name="color">
+
+    <label for="website">Website:</label>
+    <input type="url" id="website" name="website">
+
+    <label for="range">Experience Level:</label>
+    <input type="range" id="range" name="experience" min="0" max="10">
+
+    <label for="photo">Upload Profile Picture:</label>
+    <input type="file" id="photo" name="photo">
+
+    <label for="gender">Gender:</label>
+    <input type="radio" id="male" name="gender" value="male"> Male
+    <input type="radio" id="female" name="gender" value="female"> Female
+
+    <label for="hobbies">Hobbies:</label>
+    <input type="checkbox" name="hobby" value="reading"> Reading
+    <input type="checkbox" name="hobby" value="sports"> Sports
+    <input type="checkbox" name="hobby" value="music"> Music
+
+    <label for="country">Country:</label>
+    <select name="country" id="country">
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+    </select>
+
+    <label for="bio">Short Bio:</label>
+    <textarea id="bio" name="bio"></textarea>
+
+    <button type="submit">Register</button>
+    <button type="reset">Reset</button>
+  </form>
+
+  <div class="resources">
+    <h2>🔗 Practice & Learn More</h2>
+    <ul>
+      <li><a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">W3Schools - HTML Forms</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" target="_blank">MDN Web Docs - HTML Forms</a></li>
+      <li><a href="https://html.com/forms/" target="_blank">HTML.com - Forms Guide</a></li>
+      <li><a href="https://www.freecodecamp.org/news/html-forms-tutorial/" target="_blank">freeCodeCamp - HTML Forms Tutorial</a></li>
+      <li><a href="https://www.javatpoint.com/html-forms" target="_blank">JavaTpoint - HTML Forms</a></li>
+    </ul>
+  </div>
+
+  <h2>Practice Time!</h2>
+  <div class="practice">
+    <h3>Practice 1: Contact Form</h3>
+    <textarea id="practice1" placeholder="Create a contact form with name, email, and message..."></textarea>
+    <button onclick="runPractice('practice1', 'output1')">Run</button>
+    <iframe id="output1"></iframe>
+  </div>
+
+  <div class="practice">
+    <h3>Practice 2: Survey Form</h3>
+    <textarea id="practice2" placeholder="Create a survey form with radio and checkbox options..."></textarea>
+    <button onclick="runPractice('practice2', 'output2')">Run</button>
+    <iframe id="output2"></iframe>
+  </div>
+
+  <div class="practice">
+    <h3>Practice 3: Registration Form</h3>
+    <textarea id="practice3" placeholder="Create a registration form with input, select, and textarea..."></textarea>
+    <button onclick="runPractice('practice3', 'output3')">Run</button>
+    <iframe id="output3"></iframe>
+  </div>
+
+  <script>
+    function runPractice(inputId, outputId) {
+      const code = document.getElementById(inputId).value;
+      const outputFrame = document.getElementById(outputId);
+      const doc = outputFrame.contentDocument || outputFrame.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>

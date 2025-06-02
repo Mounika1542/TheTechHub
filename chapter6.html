@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chapter 6: Adding Images</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    .section {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 140px;
+      font-family: monospace;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+    }
+
+    .live-preview {
+      margin-top: 10px;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      min-height: 150px;
+    }
+
+    .note {
+      background: #e8f5e9;
+      padding: 10px;
+      border-left: 4px solid #2ecc71;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Chapter 6: Adding Images in HTML</h1>
+<p>Images are essential in web design. Let’s learn how to use the <code>&lt;img&gt;</code> tag in HTML, style images with CSS, and even update them using JavaScript — all without leaving this page!</p>
+
+<!-- Section 1 -->
+<div class="section">
+  <h2>1. Basic Image</h2>
+  <p>The <code>&lt;img&gt;</code> tag inserts an image using the <code>src</code> attribute for the path and <code>alt</code> for alternative text.</p>
+  <textarea id="code1">&lt;img src="https://via.placeholder.com/150" alt="Sample Image"&gt;</textarea>
+  <div class="live-preview" id="preview1"></div>
+  <div class="note">This will show a placeholder image with a width and height of 150px.</div>
+</div>
+
+<!-- Section 2 -->
+<div class="section">
+  <h2>2. Image with Width and Height</h2>
+  <p>You can add width and height to an image for layout control.</p>
+  <textarea id="code2">&lt;img src="https://via.placeholder.com/200x100" width="200" height="100" alt="Sized Image"&gt;</textarea>
+  <div class="live-preview" id="preview2"></div>
+  <div class="note">This shows how to scale an image using HTML attributes.</div>
+</div>
+
+<!-- Section 3 -->
+<div class="section">
+  <h2>3. Responsive Image with CSS</h2>
+  <p>Use CSS to make images responsive, meaning they adjust to different screen sizes.</p>
+  <textarea id="code3">&lt;style&gt;
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+&lt;/style&gt;
+
+&lt;img src="https://via.placeholder.com/300x150" class="responsive-img" alt="Responsive Image"&gt;</textarea>
+  <div class="live-preview" id="preview3"></div>
+  <div class="note">This image scales to fit its container without distortion.</div>
+</div>
+
+<!-- Section 4 -->
+<div class="section">
+  <h2>4. Clickable Image</h2>
+  <p>Wrap an image with a link to make it clickable.</p>
+  <textarea id="code4">&lt;a href="https://example.com"&gt;
+  &lt;img src="https://via.placeholder.com/150" alt="Clickable Image"&gt;
+&lt;/a&gt;</textarea>
+  <div class="live-preview" id="preview4"></div>
+  <div class="note">This image links to another webpage when clicked.</div>
+</div>
+
+<!-- Section 5 -->
+<div class="section">
+  <h2>5. Changing Image with JavaScript</h2>
+  <p>You can dynamically update an image source with JavaScript. This can be useful for image galleries or product views.</p>
+  <textarea id="code5">&lt;img id="myImg" src="https://via.placeholder.com/150" alt="Switch Image"&gt;&lt;br&gt;
+&lt;button onclick="document.getElementById('myImg').src='https://via.placeholder.com/250x100'"&gt;Change Image&lt;/button&gt;</textarea>
+  <div class="live-preview" id="preview5"></div>
+  <div class="note">Clicking the button will change the image using JavaScript.</div>
+</div>
+
+<script>
+function updateLivePreview(id) {
+  const code = document.getElementById('code' + id).value;
+  const preview = document.getElementById('preview' + id);
+  preview.innerHTML = code;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  for (let i = 1; i <= 5; i++) {
+    updateLivePreview(i);
+    document.getElementById('code' + i).addEventListener('input', () => updateLivePreview(i));
+  }
+});
+</script>
+
+</body>
+</html>

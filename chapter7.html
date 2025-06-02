@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chapter 7: Semantic Tags in HTML</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px 40px;
+      color: #333;
+      line-height: 1.6;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 {
+      color: #1e3a8a;
+      border-bottom: 3px solid #1e3a8a;
+      padding-bottom: 10px;
+    }
+    section {
+      margin-top: 30px;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgb(0 0 0 / 0.1);
+    }
+    article {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #2563eb;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 6px;
+    }
+    h3 {
+      color: #3b82f6;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+    p {
+      margin-bottom: 14px;
+      font-size: 16px;
+    }
+    code {
+      background-color: #e0e7ff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+      font-size: 15px;
+    }
+    pre {
+      background-color: #f3f4f6;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 10px;
+      border-left: 5px solid #2563eb;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .practice {
+      background-color: #e0f2fe;
+      border-left: 6px solid #0284c7;
+      padding: 20px;
+      border-radius: 10px;
+      color: #075985;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #64748b;
+      margin-top: 50px;
+      padding: 15px 0;
+      border-top: 1px solid #cbd5e1;
+    }
+    /* Preview styling */
+    .example {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    textarea {
+      width: 48%;
+      height: 120px;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      padding: 12px;
+      border: 2px solid #2563eb;
+      border-radius: 8px;
+      resize: vertical;
+      box-sizing: border-box;
+      background: #f9fafb;
+      color: #1e293b;
+      outline-offset: 2px;
+    }
+    .preview {
+      width: 48%;
+      min-height: 120px;
+      border: 2px solid #22c55e;
+      border-radius: 8px;
+      background: #ecfdf5;
+      padding: 15px;
+      box-sizing: border-box;
+      overflow-wrap: break-word;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #166534;
+    }
+    .preview h1, .preview h2, .preview h3, .preview p, .preview nav, .preview article, .preview section, .preview aside, .preview footer {
+      margin: 0 0 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📚 Chapter 7: Semantic Tags in HTML</h1>
+
+  <section>
+    <h2>What are Semantic Tags?</h2>
+    <p>Semantic tags clearly describe their meaning to both the browser and the developer. Unlike generic tags like <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>, semantic tags tell what kind of content they contain, which helps with SEO, accessibility, and maintainable code.</p>
+    <p>Using semantic tags improves:</p>
+    <ul>
+      <li><strong>Accessibility:</strong> Screen readers understand the page structure better.</li>
+      <li><strong>SEO:</strong> Search engines prioritize content meaningfully.</li>
+      <li><strong>Readability:</strong> Developers and teams can quickly understand your HTML.</li>
+      <li><strong>Maintainability:</strong> Easier to update and style.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Common Semantic Tags and Their Usage</h2>
+
+    <article>
+      <h3>1. &lt;header&gt;</h3>
+      <p>The <code>&lt;header&gt;</code> element represents introductory content or a set of navigational links. It usually contains the site logo, main heading, or menu.</p>
+      <div class="example">
+        <textarea id="code-header" spellcheck="false">&lt;header&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</textarea>
+        <div id="preview-header" class="preview"></div>
+      </div>
+    </article>
+
+    <article>
+      <h3>2. &lt;nav&gt;</h3>
+      <p>The <code>&lt;nav&gt;</code> element defines a section intended for navigation links like menus or tables of contents.</p>
+      <div class="example">
+        <textarea id="code-nav" spellcheck="false">&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</textarea>
+        <div id="preview-nav" class="preview"></div>
+      </div>
+    </article>
+
+    <article>
+      <h3>3. &lt;main&gt;</h3>
+      <p>The <code>&lt;main&gt;</code> tag holds the dominant content of the <em>document</em>. There should only be one <code>&lt;main&gt;</code> per page.</p>
+      <div class="example">
+        <textarea id="code-main" spellcheck="false">&lt;main&gt;
+  &lt;h2&gt;Welcome to my website&lt;/h2&gt;
+  &lt;p&gt;Here is the primary content.&lt;/p&gt;
+&lt;/main&gt;</textarea>
+        <div id="preview-main" class="preview"></div>
+      </div>
+    </article>
+
+    <article>
+      <h3>4. &lt;section&gt;</h3>
+      <p>The <code>&lt;section&gt;</code> element groups related content into thematic sections, usually with a heading.</p>
+      <div class="example">
+        <textarea id="code-section" spellcheck="false">&lt;section&gt;
+  &lt;h2&gt;Latest News&lt;/h2&gt;
+  &lt;p&gt;News content here.&lt;/p&gt;
+&lt;/section&gt;</textarea>
+        <div id="preview-section" class="preview"></div>
+      </div>
+    </article>
+
+    <article>
+      <h3>5. &lt;article&gt;</h3>
+      <p>The <code>&lt;article&gt;</code> tag contains independent content that could be distributed or reused elsewhere, such as blog posts, news articles, or comments.</p>
+      <div class="example">
+        <textarea id="code-article" spellcheck="false">&lt;article&gt;
+  &lt;h3&gt;Blog Post Title&lt;/h3&gt;
+  &lt;p&gt;Post content.&lt;/p&gt;
+&lt;/article&gt;</textarea>
+        <div id="preview-article" class="preview"></div>
+      </div>
+    </article>
+
+    <article>
+      <h3>6. &lt;aside&gt;</h3>
+      <p>The <code>&lt;aside&gt;</code> element holds content indirectly related to the main content — like sidebars, ads, or related links.</p>
+      <div class="example">
+        <textarea id="code-aside" spellcheck="false">&lt;aside&gt;
+  &lt;h4&gt;Related Links&lt;/h4&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;</textarea>
+        <div id="preview-aside" class="preview"></div>
+      </div>
+    </article>
+
+    <article>
+      <h3>7. &lt;footer&gt;</h3>
+      <p>The <code>&lt;footer&gt;</code> element contains footer content for its nearest sectioning content or the entire page. It typically includes author info, copyright, or contact info.</p>
+      <div class="example">
+        <textarea id="code-footer" spellcheck="false">&lt;footer&gt;
+  &lt;p&gt;© 2025 My Website. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;</textarea>
+        <div id="preview-footer" class="preview"></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="practice">
+    <h2>Practice Exercises</h2>
+    <p>Try the following exercises to deepen your understanding of semantic tags:</p>
+    <ul>
+      <li>Create a webpage with a <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> section. Put appropriate content inside each.</li>
+      <li>Within the <code>&lt;main&gt;</code>, add two <code>&lt;article&gt;</code> elements, each with a heading and some text.</li>
+      <li>Use <code>&lt;section&gt;</code> to group related articles logically inside the main content.</li>
+      <li>Add an <code>&lt;aside&gt;</code> with additional info or links, positioned beside your main content using CSS.</li>
+      <li>Style all your semantic tags using CSS to visually distinguish the layout.</li>
+      <li>Validate your HTML to check for semantic correctness.</li>
+    </ul>
+    <p>By practicing, you will make your pages more structured, accessible, and easier to maintain.</p>
+  </section>
+
+  <footer>
+    © 2025 TheTechHub. All rights reserved.
+  </footer>
+
+  <script>
+    // List of all textarea IDs and their corresponding preview div IDs
+    const examples = [
+      "header", "nav", "main", "section", "article", "aside", "footer"
+    ];
+
+    examples.forEach(id => {
+      const textarea = document.getElementById("code-" + id);
+      const preview = document.getElementById("preview-" + id);
+
+      // Initial render
+      preview.innerHTML = textarea.value;
+
+      // Update preview on input
+      textarea.addEventListener("input", () => {
+        preview.innerHTML = textarea.value;
+      });
+    });
+  </script>
+</body>
+</html>

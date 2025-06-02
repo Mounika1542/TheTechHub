@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 5: Adding Links</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      font-family: monospace;
+      font-size: 14px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 100px;
+      border: 1px solid #ccc;
+      background: white;
+      margin-top: 10px;
+    }
+    .task-box {
+      background: #fff;
+      padding: 15px;
+      border-left: 4px solid #3498db;
+      border-radius: 6px;
+    }
+    details {
+      background: #eef;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .note {
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<h1> Chapter 5: Adding Links in HTML</h1>
+
+<section>
+  <h2> What are Links?</h2>
+  <p>Links (or anchor tags) in HTML allow users to click and navigate to:</p>
+  <ul>
+    <li>External websites</li>
+    <li>Other pages of your website</li>
+    <li>Download files</li>
+    <li>Open email programs</li>
+    <li>Jump to a specific part of the same page</li>
+  </ul>
+</section>
+
+<hr>
+
+<section>
+  <h2>🔹 Task 1: External Link</h2>
+  <div class="task-box">
+    <p>Create a link to <strong>https://www.wikipedia.org</strong> that says “Go to Wikipedia”.</p>
+    <textarea id="task1">&lt;a href="https://www.wikipedia.org"&gt;Go to Wikipedia&lt;/a&gt;</textarea>
+    <iframe id="preview1"></iframe>
+  </div>
+</section>
+
+<section>
+  <h2>🔹 Task 2: Open Link in New Tab</h2>
+  <div class="task-box">
+    <p>Create a link to <strong>https://openai.com</strong> that opens in a new tab.</p>
+    <textarea id="task2">&lt;a href="https://openai.com" target="_blank"&gt;Visit OpenAI&lt;/a&gt;</textarea>
+    <iframe id="preview2"></iframe>
+    <p class="note">The <code>target="_blank"</code> attribute opens the link in a new browser tab.</p>
+  </div>
+</section>
+
+<section>
+  <h2>🔹 Task 3: Email Link</h2>
+  <div class="task-box">
+    <p>Create a link that lets users send an email to <strong>hello@example.com</strong>.</p>
+    <textarea id="task3">&lt;a href="mailto:hello@example.com"&gt;Send Email&lt;/a&gt;</textarea>
+    <iframe id="preview3"></iframe>
+    <p class="note">Use <code>mailto:</code> to open the default email app with the address pre-filled.</p>
+  </div>
+</section>
+
+<section>
+  <h2>🔹 Task 4: Download File</h2>
+  <div class="task-box">
+    <p>Create a link to download a file named <strong>example.pdf</strong>.</p>
+    <textarea id="task4">&lt;a href="files/example.pdf" download&gt;Download PDF&lt;/a&gt;</textarea>
+    <iframe id="preview4"></iframe>
+    <p class="note">The <code>download</code> attribute downloads the file instead of opening it.</p>
+  </div>
+</section>
+
+<section>
+  <h2>🔹 Task 5: Anchor Link (Same Page)</h2>
+  <div class="task-box">
+    <p>Create a link that jumps to a specific section of the same page.</p>
+    <textarea id="task5">&lt;a href="#my-section"&gt;Go to Bottom Section&lt;/a&gt;</textarea>
+    <iframe id="preview5"></iframe>
+    <p class="note">Use <code>href="#id"</code> to jump to an element with that ID.</p>
+  </div>
+</section>
+
+<!-- Anchor destination for same-page link -->
+<section id="my-section" style="margin-top: 200px;">
+  <h2> Bottom Section</h2>
+  <p>You jumped here using an anchor link!</p>
+</section>
+
+<details>
+  <summary>Bonus Tip: Styling Links</summary>
+  <p>You can style links using CSS like this:</p>
+  <pre><code>
+a {
+  color: blue;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+  </code></pre>
+</details>
+
+<script>
+  function updatePreview(id) {
+    const textarea = document.getElementById(`task${id}`);
+    const iframe = document.getElementById(`preview${id}`);
+    const doc = iframe.contentDocument || iframe.contentWindow.document;
+    doc.open();
+    doc.write(textarea.value);
+    doc.close();
+  }
+
+  for (let i = 1; i <= 5; i++) {
+    const textarea = document.getElementById(`task${i}`);
+    textarea.addEventListener("input", () => updatePreview(i));
+    updatePreview(i); // Run once at start
+  }
+</script>
+
+</body>
+</html>

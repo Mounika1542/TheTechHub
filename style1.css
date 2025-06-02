@@ -1,0 +1,224 @@
+/*
+body{
+    font-family: Arial, sans-serif;
+    height: 400vh;
+    margin: 0;
+    /* display: grid; 
+    place-items: center; 
+    background-color: wheat;
+    border: 10px solid paleturquoise;
+}
+header{
+    text-align: center;
+    font-family: 'Lucida Sans';
+    margin-top: 10px;
+    font: bold;
+    padding: 20px;
+    background-color: grey;
+    color: whitesmoke; 
+
+}
+p{
+    text-decoration: solid;
+    text-align: left;
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#file{
+    text-justify: inter-cluster;
+    text-align: center;
+    background-color:azure;
+    text-decoration:dotted;font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+img{
+    max-width: 100%; 
+    height: auto;
+}
+#file1{
+    text-justify: inter-cluster;
+    text-align: center;
+    background-color:azure;
+    text-decoration:dotted;
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#file2{
+    text-justify: inter-cluster;
+    text-align: center;
+    background-color:azure;
+    text-decoration:dotted;
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#file3{
+    text-justify: inter-cluster;
+    text-align: center;
+    background-color:azure;
+    text-decoration:dotted;
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#file4{
+    text-justify: inter-cluster;
+    text-align: center;
+    background-color:azure;
+    text-decoration:dotted;
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#file5{
+    text-justify: inter-cluster;
+    text-align: center;
+    background-color:azure;
+    text-decoration:dotted;
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#file6{
+    text-justify: inter-cluster;
+    text-align: center;
+    background-color:azure;
+    text-decoration:dotted;
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.question {
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+div{
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.link {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    background-color:white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  header {
+    background-color: #008080;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .step {
+    background: #fff;
+    padding: 15px;
+    border-left: 6px solid #008080;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .step p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .step img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+  
+  .question {
+    text-align: center;
+    margin: 30px 0;
+    background: #e0f7fa;
+    padding: 20px;
+    border-left: 6px solid #008080;
+    border-radius: 10px;
+  }
+  
+  .next-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .next-link a {
+    background-color: #008080;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease;
+  }
+  
+  .next-link a:hover {
+    background-color: #006666;
+  }
+  
+
+

@@ -1,0 +1,249 @@
+/* /* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+/*body{
+    border: 10px solid dimgray;
+    margin: 0;
+    padding: 20px;
+    
+    
+}
+.header{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color:burlywood;
+    color: white;
+    margin: 10px;
+    
+}
+.header1{
+    border: 10px solid black;
+    height: 120px;
+    width: 120px;
+    text-align:center;
+    border-radius: 50%;
+    justify-items:center;
+    font-size: 14px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+    box-sizing: border-box;
+    
+    background-color: blanchedalmond;
+}
+/* div{
+    
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    color: white;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+    
+} */
+ /*
+#header2{
+    margin: 5px;
+    border: 10px solid black;
+    height: 120px;
+    width: 120px;
+    text-align:center;
+    border-radius: 50%;
+    justify-items:center;
+    font-size: 14px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+    box-sizing: border-box;
+    
+    background-color: blanchedalmond;
+}
+.header3{
+    margin: 5px;
+    border: 10px solid black;
+    height: 120px;
+    width: 120px;
+    text-align:center;
+    border-radius: 50%;
+    justify-items:center;
+    font-size: 14px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+    box-sizing: border-box;
+    
+    background-color: blanchedalmond;
+    
+        
+    
+}
+.header4{
+    margin: 5px;
+    border: 10px solid black;
+    height: 120px;
+    width: 120px;
+    text-align:center;
+    border-radius: 50%;
+    justify-items:center;
+    font-size: 14px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+    box-sizing: border-box;
+    
+    background-color: blanchedalmond;
+    
+        
+    
+}
+.grid{
+    display: grid;
+    
+    gap: 20px; /* Space between circles */
+    /*
+} 
+*/
+
+/* About Section Styling */
+/*
+.intro {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+    background-color: #f0f8ff;
+    border-left: 6px solid #008b8b;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 12px;
+}
+
+.intro:hover {
+    transform: translateY(-5px);
+    background-color: #e0f7fa;
+}
+
+/* Intro Text */
+/*
+.intro h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 16px;
+    color: #34495e;
+    line-height: 1.6;
+}
+
+/* Grid Improvements */
+/*
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin: 20px;
+    justify-items: center;
+}
+
+/* Make all headers share common styles */
+/*
+.header1, #header2, .header3, .header4 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header1:hover, #header2:hover, .header3:hover, .header4:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+*//* General Circle Style */
+.circle {
+    border: 10px solid black;
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: blanchedalmond;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.circle:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Description hidden until hover */
+.circle-card {
+    text-align: center;
+    margin: 20px;
+}
+
+.desc {
+    display: none;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border-left: 5px solid #ccc;
+}
+
+.circle-card:hover .desc {
+    display: block;
+}
+
+/* Layout grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Intro Section */
+.intro {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+    background-color: #f0f8ff;
+    border-left: 6px solid #008b8b;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 12px;
+    text-align: center;
+}
+.intro:hover {
+    transform: translateY(-5px);
+    background-color: #e0f7fa;
+}
+
+.intro h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 16px;
+    color: #34495e;
+    line-height: 1.6;
+}

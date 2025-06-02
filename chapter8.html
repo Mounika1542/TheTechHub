@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 8: Creating Tables in HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    h1, h2 {
+      color: #005580;
+    }
+    .note {
+      background-color: #e0f7fa;
+      padding: 10px;
+      border-left: 5px solid #00796b;
+      margin: 10px 0;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #555;
+      text-align: center;
+    }
+    th {
+      background-color: #e6f7ff;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      margin-top: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+    .practice {
+      background-color: #ffffff;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .resources {
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .resources ul {
+      padding-left: 20px;
+    }
+    .resources li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Chapter 8: Creating Tables in HTML</h1>
+  <p>Tables in HTML are used to display data in a structured format using rows and columns—like a spreadsheet or data grid. This is helpful for showing schedules, price lists, results, or any information that fits a tabular form.</p>
+
+  <h2>Why Use Tables?</h2>
+  <ul>
+    <li>Compare different pieces of data side-by-side.</li>
+    <li>Present structured data in a readable format.</li>
+    <li>Create complex layouts (though CSS is preferred for layout today).</li>
+  </ul>
+
+  <h2>Basic Table Structure</h2>
+  <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Heading 1&lt;/th&gt;
+    &lt;th&gt;Heading 2&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Row 1, Col 1&lt;/td&gt;
+    &lt;td&gt;Row 1, Col 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+  <h2>Explanation of Tags</h2>
+  <table>
+    <tr><th>Tag</th><th>Meaning</th><th>Use</th></tr>
+    <tr><td>&lt;table&gt;</td><td>Table element</td><td>Wraps the entire table</td></tr>
+    <tr><td>&lt;tr&gt;</td><td>Table Row</td><td>Defines a row in the table</td></tr>
+    <tr><td>&lt;th&gt;</td><td>Table Header</td><td>Defines a heading cell</td></tr>
+    <tr><td>&lt;td&gt;</td><td>Table Data</td><td>Defines a normal data cell</td></tr>
+  </table>
+
+  <h2>Example: Student Marksheet</h2>
+  <table>
+    <tr><th>Name</th><th>Math</th><th>Science</th><th>English</th></tr>
+    <tr><td>Ali</td><td>85</td><td>90</td><td>88</td></tr>
+    <tr><td>Zara</td><td>78</td><td>95</td><td>82</td></tr>
+  </table>
+
+  <h2>Advanced: Merging Cells</h2>
+  <pre><code>&lt;td colspan="2"&gt;Merged Cell&lt;/td&gt;</code></pre>
+  <pre><code>&lt;td rowspan="2"&gt;Merged Cell&lt;/td&gt;</code></pre>
+  <table>
+    <tr><th>Name</th><th colspan="2">Scores</th></tr>
+    <tr><td>Ana</td><td>95</td><td>88</td></tr>
+  </table>
+
+  <div class="note">
+    <strong>Notes:</strong>
+    <ul>
+      <li>Use &lt;thead&gt;, &lt;tbody&gt;, and &lt;tfoot&gt; for better structure in large datasets.</li>
+      <li>Use CSS Grid or Flexbox for page layout, not tables.</li>
+      <li>Make tables responsive using JavaScript or media queries.</li>
+    </ul>
+  </div>
+
+  <div class="resources">
+    <h2>🔗 Additional Learning Resources</h2>
+    <ul>
+      <li><a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">W3Schools - HTML Tables</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank">MDN Web Docs - HTML Table Element</a></li>
+      <li><a href="https://www.youtube.com/watch?v=BIxkJRXYAxY" target="_blank">YouTube: HTML Tables Tutorial for Beginners</a></li>
+      <li><a href="https://html.com/tables/" target="_blank">HTML.com - HTML Tables Guide</a></li>
+      <li><a href="https://www.freecodecamp.org/news/html-table-tutorial/" target="_blank">freeCodeCamp - HTML Table Tutorial</a></li>
+    </ul>
+  </div>
+
+  <h2>Practice Time!</h2>
+  <div class="practice">
+    <h3>Practice 1: Basic Table</h3>
+    <p>Create a table showing your 3 favorite fruits, their color, and taste.</p>
+    <textarea id="practice1" placeholder="Write your HTML code here..."></textarea>
+    <button onclick="runPractice('practice1', 'output1')">Run</button>
+    <iframe id="output1"></iframe>
+  </div>
+
+  <div class="practice">
+    <h3>Practice 2: Weekly Schedule</h3>
+    <p>Make a table with days of the week as headers and activities in each row.</p>
+    <textarea id="practice2" placeholder="Write your HTML code here..."></textarea>
+    <button onclick="runPractice('practice2', 'output2')">Run</button>
+    <iframe id="output2"></iframe>
+  </div>
+
+  <div class="practice">
+    <h3>Practice 3: Merge Cells</h3>
+    <p>Create a pricing table where one cell spans across two columns or rows.</p>
+    <textarea id="practice3" placeholder="Write your HTML code here..."></textarea>
+    <button onclick="runPractice('practice3', 'output3')">Run</button>
+    <iframe id="output3"></iframe>
+  </div>
+
+  <script>
+    function runPractice(inputId, outputId) {
+      const code = document.getElementById(inputId).value;
+      const outputFrame = document.getElementById(outputId);
+      const doc = outputFrame.contentDocument || outputFrame.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>

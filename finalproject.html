@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose Your Final Project Domain</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #fff);
+      padding: 30px;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    ul, form {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    input[type="submit"] {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #218838;
+    }
+    #response {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <h1>Final Project: Build a Domain-Based Website</h1>
+  <p>Choose a domain you're interested in and create your own web page project!</p>
+
+  <h2>Available Domains</h2>
+  <ul>
+    <li><strong>Education</strong> - E.g., Online Course Page</li>
+    <li><strong>Health</strong> - E.g., Fitness Tracker Form</li>
+    <li><strong>Travel</strong> - E.g., Trip Booking Form</li>
+    <li><strong>E-Commerce</strong> - E.g., Product Order Page</li>
+    <li><strong>Food</strong> - E.g., Online Food Order</li>
+    <li><strong>Entertainment</strong> - E.g., Movie Ticket Booking</li>
+    <li><strong>Portfolio</strong> - E.g., Personal Resume Website</li>
+    <li><strong>Blog</strong> - E.g., Travel Blog Page</li>
+  </ul>
+
+  <h2>Project Instructions</h2>
+  <ul>
+    <li>Choose any domain of your interest from above</li>
+    <li>Create a web page using HTML</li>
+    <li>Include headings, paragraphs, lists, forms, images, links, and interactivity</li>
+    <li>Make sure the content is clear and well-structured</li>
+    <li>Write a short description about your project idea</li>
+  </ul>
+
+  <h2>Example Project (Education Domain)</h2>
+  <p>This is an example of an <strong>Online Course Registration Page</strong> using HTML, CSS, and JavaScript:</p>
+  <hr>
+  <h3>Course Registration Form</h3>
+  <form id="courseForm">
+    <label for="fullname">Full Name:</label>
+    <input type="text" name="fullname" id="fullname" placeholder="Enter your full name">
+
+    <label for="email">Email Address:</label>
+    <input type="email" name="email" id="email" placeholder="Enter your email">
+
+    <label for="course">Select Course:</label>
+    <select name="course" id="course">
+      <option value="web">Web Development</option>
+      <option value="data">Data Science</option>
+      <option value="ai">AI & ML</option>
+    </select>
+
+    <label for="reason">Why do you want to join this course?</label>
+    <textarea name="reason" id="reason" rows="4" placeholder="Write your reason here..."></textarea>
+
+    <input type="submit" value="Register">
+  </form>
+
+  <p id="response"></p>
+
+  <script>
+    document.getElementById("courseForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const name = document.getElementById("fullname").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const course = document.getElementById("course").value;
+      const response = document.getElementById("response");
+
+      if (name && email) {
+        response.textContent = `✅ Thank you, ${name}! You have successfully registered for the ${course} course.`;
+      } else {
+        response.textContent = "⚠️ Please fill out all required fields.";
+        response.style.color = "#d32f2f";
+      }
+    });
+  </script>
+</body>
+</html>

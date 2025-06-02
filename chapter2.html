@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Elements</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .section-box {
+            background: #fff;
+            border-radius: 8px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section-box:hover {
+            transform: scale(1.05);
+        }
+
+        .section-box h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #0077cc;
+        }
+
+        .section-box pre {
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .nav-links ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 20px 0;
+            background-color: #333;
+        }
+
+        .nav-links ul li {
+            margin: 0 10px;
+        }
+
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .nav-links ul li a:hover {
+            color: #0077cc;
+        }
+        .section-box{
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #1e2835; /* Dark background for explanation containers */
+            border: 2px solid #4e4376; /* Border with a complementary color */
+            border-radius: 10px;
+            width: 80%; /* Adjust the width to center and make it fit nicely */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for a 3D effect */
+        }
+        p {
+            font-size: 1.1em;
+            color:hotpink; /* Soft dark color for paragraphs */
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .chater2_p:hover{
+            font-size: small;
+            color: firebrick;
+            box-sizing: border-box;
+            border-radius: 60%;
+            margin-bottom:20px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #1e2835; /* Dark background for explanation containers */
+            border: 2px solid #4e4376; /* Border with a complementary color */
+            border-radius: 10px;
+            width: 80%; /* Adjust the width to center and make it fit nicely */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for a 3D effect */
+        }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .section-box h2 {
+                font-size: 1.6em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .section-box h2 {
+                font-size: 1.4em;
+            }
+
+            .nav-links ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links ul li {
+                margin-bottom: 10px;
+            }
+        }
+        .links-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Styling the list of links */
+.links-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links-section ul li {
+    margin: 10px 0;
+}
+
+/* Styling the individual links */
+.links-section a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #007BFF;
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.links-section a:hover {
+    background-color: #007BFF;
+    color: white;
+}
+h1 {
+            text-align: center;
+        }
+        .exercise {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .preview {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }   
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Chapter 2: Elements</h1>
+        </header>
+
+        <section class="section-box">
+            <h2>1. Structural Elements</h2>
+            <p>These elements define the basic structure of a webpage.</p>
+            <pre><code>&lt;html&gt;</code></pre>
+            <pre><code>&lt;head&gt;</code></pre>
+            <pre><code>&lt;body&gt;</code></pre>
+            <pre><code>&lt;/body&gt;</code></pre>
+            <pre><code>&lt;/html&gt;</code></pre>
+        </section>
+
+        <section class="section-box">
+            <h2>2. Text Elements</h2>
+            <p>Used to display and format text on the webpage.</p>
+            <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;</code></pre>
+            <pre><code>&lt;p&gt;This is a &lt;strong&gt;strong&lt;/strong&gt; paragraph.&lt;/p&gt;</code></pre>
+        </section>
+
+        <section class="section-box">
+            <h2>3. Link Element</h2>
+            <p>Used for creating hyperlinks.</p>
+            <pre><code>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</code></pre>
+        </section>
+
+        <section class="section-box">
+            <h2>4. Image Element</h2>
+            <p>Used for embedding images.</p>
+            <pre><code>&lt;img src="image.jpg" alt="Image Description"&gt;</code></pre>
+        </section>
+
+        <section class="section-box">
+            <h2>5. Form Elements</h2>
+            <p>Used to create forms for user input.</p>
+            <pre><code>&lt;form&gt;</code></pre>
+            <pre><code>&lt;input type="text" name="name"&gt;</code></pre>
+            <pre><code>&lt;button&gt;Submit&lt;/button&gt;</code></pre>
+            <pre><code>&lt;/form&gt;</code></pre>
+        </section>
+
+        <section class="section-box">
+            <h2>6. Table Elements</h2>
+            <p>Used to create tables.</p>
+            <pre><code>&lt;table&gt;</code></pre>
+            <pre><code>&lt;tr&gt;&lt;th&gt;Header&lt;/th&gt;&lt;/tr&gt;</code></pre>
+            <pre><code>&lt;/table&gt;</code></pre>
+        </section>
+
+        <section class="section-box">
+            <h2>7. List Elements</h2>
+            <p>Used to create ordered and unordered lists.</p>
+            <pre><code>&lt;ul&gt;&lt;li&gt;Item 1&lt;/li&gt;&lt;/ul&gt;</code></pre>
+            <pre><code>&lt;ol&gt;&lt;li&gt;First&lt;/li&gt;&lt;/ol&gt;</code></pre>
+        </section>
+
+        <section class="section-box">
+            <h2>8. Semantic Elements</h2>
+            <p>Elements that provide meaning to the content.</p>
+            <pre><code>&lt;header&gt;Header Content&lt;/header&gt;</code></pre>
+            <pre><code>&lt;footer&gt;Footer Content&lt;/footer&gt;</code></pre>
+        </section>
+
+        <section class="section-box">
+            <h2>9. Media Elements</h2>
+            <p>Used to embed audio and video content.</p>
+            <pre><code>&lt;audio controls&gt;&lt;source src="audio.mp3" type="audio/mp3"&gt;&lt;/audio&gt;</code></pre>
+            <pre><code>&lt;video controls&gt;&lt;source src="video.mp4" type="video/mp4"&gt;&lt;/video&gt;</code></pre>
+        </section>
+
+        <section class="section-box">
+            <h2>10. Script and Style Elements</h2>
+            <p>For embedding JavaScript and CSS styles.</p>
+            <pre><code>&lt;style&gt; body { background-color: #f0f0f0; } &lt;/style&gt;</code></pre>
+            <pre><code>&lt;script&gt; alert("Hello!"); &lt;/script&gt;</code></pre>
+        </section>
+        <p class="chater2_p">If you understand, then let's go to <strong>CHAPTER 3</strong>. Before that, below are different YouTube videos that will help you understand what Elements exactly is. If you don't fully understand Elements yet, go through the resources linked below ⬇️</p>
+
+        <div class="links-section">
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">HTML Full Course for Beginners | Learn HTML in 1 Hour - Programming with Mosh</a></li>
+                <li><a href="https://www.youtube.com/watch?v=6JdZczT8Www" target="_blank">Learn HTML in 30 minutes - freeCodeCamp</a></li>
+                <li><a href="https://www.youtube.com/watch?v=RgfUDEk76nE" target="_blank">HTML Tutorial for Beginners | Learn HTML from Scratch | Simplilearn</a></li>
+                <li><a href="https://www.youtube.com/watch?v=KeVLBrl6eHw" target="_blank">HTML Crash Course For Absolute Beginners | Traversy Media</a></li>
+                <li><a href="https://www.youtube.com/watch?v=Q6MvWlrJHx0" target="_blank">HTML Tutorial for Beginners | Learn HTML in 2022 | Tech With Tim</a></li>
+            </ul>
+        </div>
+
+        <p>After getting clarity <strong>CHAPTER 2</strong> and HTML meaning to first code of html then go through small exercise question in below section ⬇️</p>
+    </div>
+    
+
+    
+            
+    <h1>HTML Chapter 2: Basic Elements - Practice Exercises</h1>
+
+    <!-- Exercise 1 -->
+    <div class="exercise">
+        <h2>Exercise 1: Basic Text Elements</h2>
+        <p><strong>Instructions:</strong> Create a webpage with an <code>&lt;h1&gt;</code> header, <code>&lt;h2&gt;</code> subheader, and a <code>&lt;p&gt;</code> paragraph.</p>
+        <p><strong>Example output:</strong></p>
+        <pre>
+Welcome to HTML Chapter 2
+Subheading: Let's Practice!
+This is a basic paragraph element to demonstrate the <code>&lt;p&gt;</code> tag.
+        </pre>
+        <textarea id="exercise1-code"></textarea>
+        <button class="btn" onclick="previewExercise1()">Preview</button>
+        <div class="preview" id="exercise1-preview"></div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 2: Links and Lists</h2>
+        <p><strong>Instructions:</strong> Create an unordered list of your favorite foods, and include a link to a webpage (e.g., <code>https://www.w3schools.com</code>).</p>
+        <p><strong>Example output:</strong></p>
+        <pre>
+Visit the <a href="https://www.w3schools.com">W3Schools Website</a> for more information!
+Unordered List of Favorite Foods:
+- Pizza
+- Ice Cream
+- Salad
+        </pre>
+        <textarea id="exercise2-code"></textarea>
+        <button class="btn" onclick="previewExercise2()">Preview</button>
+        <div class="preview" id="exercise2-preview"></div>
+    </div>
+    <div class="exercise">
+        <h2>Exercise 3: Image Element</h2>
+        <p><strong>Instructions:</strong> Add an image to your webpage using the <code>&lt;img&gt;</code> tag with appropriate attributes.</p>
+        <p><strong>Example output:</strong></p>
+        <pre>
+Here's an example image:
+[Image]
+        </pre>
+        <textarea id="exercise3-code"></textarea>
+        <button class="btn" onclick="previewExercise3()">Preview</button>
+        <div class="preview" id="exercise3-preview"></div>
+    </div>
+
+    <script>
+    function previewExercise1() {
+        var code = document.getElementById("exercise1-code").value;
+        document.getElementById("exercise1-preview").innerHTML = code;
+    }
+
+    // Function to preview Exercise 2
+    function previewExercise2() {
+        var code = document.getElementById("exercise2-code").value;
+        document.getElementById("exercise2-preview").innerHTML = code;
+    }
+
+    // Function to preview Exercise 3
+    function previewExercise3() {
+        var code = document.getElementById("exercise3-code").value;
+        document.getElementById("exercise3-preview").innerHTML = code;
+    }
+
+
+</script>
+
+
+    
+</body>
+</html>

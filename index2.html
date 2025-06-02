@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #2b5876, #4e4376); /* Unique gradient background */
+            color: #f4f4f4; /* Light text for contrast */
+            margin: 0;
+            padding: 20px;
+            height: 100vh; /* Full  height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:flex-start ;
+        }
+        
+        .chapter1_header h1{
+            text-align: center;
+            font-size: 2.5em;
+            color: #2a2a2a;
+           margin-bottom: 20px;
+           border-bottom: 2px solid #eee;
+           padding-bottom: 10px;
+        }
+        .explanation {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #1e2835; /* Dark background for explanation containers */
+            border: 2px solid #4e4376; /* Border with a complementary color */
+            border-radius: 10px;
+            width: 80%; /* Adjust the width to center and make it fit nicely */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for a 3D effect */
+        }
+        .pre1, .pre2 {
+            background-color: #333; /* Dark background for code blocks */
+            color: #ffcc00; /* Bright color for code text */
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 1.1rem;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7); /* Inner shadow for code */
+        }
+        p {
+            font-size: 1.2rem;
+            color: #c9d1d3; /* Light text color for the explanation */
+            margin-top: 10px;
+        }
+        header{
+            text-align: center;
+            background-color: dimgrey;
+            padding: 20px;
+
+        }
+        h3,h6{
+            text-align: center;
+            background-color: cadetblue;
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding:10px
+        }
+        .chapter1_ul ul{
+              margin: 10px 0;
+              padding-left: 20px;
+            }
+            .chapter1_ul ul li {
+                 font-size: 1.1em;
+                color: #555;
+                    }
+        ol{
+            font-size: 18px;
+            line-height: 1.6;
+            margin-left: 40px;
+            padding: 0;
+        }
+        .tag{
+            background-color: honeydew;
+            color: burlywood;
+
+
+        }
+        image-box {
+            width: 80%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .chapter1,.chapter2{
+            background-color: #1e2835;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            max-width:800px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            
+
+        }
+
+        details[open] .chapter1 {
+            color: #007BFF;  /* Change color when open */
+            font-weight: bold;
+            }
+            .chapter2_p{
+                font-size: 1.2em;
+                color: #333;
+                margin: 20px;
+                text-align: center;
+            }
+
+/* Styling the section that holds the links */
+.links-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Styling the list of links */
+.links-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links-section ul li {
+    margin: 10px 0;
+}
+
+/* Styling the individual links */
+.links-section a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #007BFF;
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.links-section a:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* For the "go to Chapter 2" link  */
+.chapter2-link {
+    font-size: 1.5em;
+    margin-top: 20px;
+    display: block;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.chapter2-link:hover {
+    color: #0056b3;
+}
+details[open] .chapter2_header {
+            color: #007BFF;  
+            font-weight: bold;
+            }   
+            .image_inc {
+                     width: 100%;       /* Make the image take up the full width of its container */
+                     max-width: 600px;  /* Maximum width to prevent the image from becoming too large */
+                     height: auto;      /* Maintain the aspect ratio */
+                    display: block;    /* Remove extra space below the image */
+                    margin: 20px auto; /* Center the image horizontally with some margin */
+                }
+                .links-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the header */
+.header11 {
+    font-size: 2.5em;
+    color: #007BFF;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Styling the paragraph */
+.header10 {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Styling the links container */
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Styling individual links */
+.link-item {
+    display: block;
+    font-size: 1.2em;
+    color: #ffffff;
+    background-color: #007BFF;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 80%;
+    max-width: 350px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for the links */
+.link-item:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+/* Responsive styling */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .link-item {
+        width: 90%;
+    }
+}
+
+        
+        
+        /* This CSS block styles the body of the webpage */
+.link1 {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    background-color:black;
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+        
+<details class="chapter">
+    <summary class="chapter1">CHAPTER 1</summary>
+    
+    <header>Basic HTML</header>
+    <div class="chapter1">CHAPTER 1</div>
+    <h1 class="chapter1_header">Here there is divided into three steps </h1>
+    <p>"Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to pages created by other people, you become an active participant in the World Wide Web.</p>
+    <div>
+        <ul class="chapter1_ul">  
+            <li> <p class="basic1">Basic HTML: Focuses on the structure and foundational elements, such as headings, paragraphs, lists, links, and images.</p></li>
+            <li>
+                <p>Intermediate HTML: Introduces elements for layout and semantic meaning, like navigation, headers, articles, and forms.</p>
+                </li>
+                <li>
+                    <p>Advanced HTML: Involves advanced features like multimedia, forms, custom components, and accessibility techniques.</p>
+                </li></ul>
+                <h3>Step 1:"First we learn basic html"</h3>
+                
+                
+                    <ul><li>
+                        <h2>Basic HTML Vocabulary</h2></li>
+                        </ul>
+                        <p class="tag">These are the basic HTML tags that everyone starts with when learning HTML:</p>
+                        <h6>First learn about format of html</h6>
+                        <p>below there is small code html and there is small explanation of each line ⬇️</p>
+                        
+                        <h2>Explanation of Each Line of HTML Code:</h2>
+
+    <!--explain here about html-->
+
+    
+            
+        
+    
+    <h1>HTML Code Explanation</h1>
+    
+    <div class="explanation">
+        <pre class="pre1"><code class="pre2">&lt;!DOCTYPE html&gt;</code></pre>
+        <p>Defines the document type as HTML5.</p>
+    </div>
+    
+    <div class="explanation">
+        <pre class="pre1"><code class="pre2">&lt;html lang="en"&gt;</code></pre>
+        <p>Starts the HTML document and sets the language to English.</p>
+    </div>
+    
+    <div class="explanation">
+        <pre class="pre1"><code class="pre2">&lt;head&gt;</code></pre>
+        <p>Defines the head section of the document, containing metadata and styles.</p>
+    </div>
+    
+    <div class="explanation">
+        <pre class="pre1"><code class="pre2">&lt;metacharset="UTF-8"&gt;</code></pre>
+        <p>Defines the character encoding as UTF-8.</p>
+    </div>
+    
+    <div class="explanation">
+        <pre class="pre1"><code>&lt;meta name="viewport" content="width=device-width", "initial-scale=1.0"&gt;</code></pre>
+        <p>Ensures the page is responsive on various devices.</p>
+    </div>
+    
+    <div class="explanation">
+        <pre class="pre1"><code class="pre2">&lt;title&gt;Code Explanation&lt;/title&gt;</code></pre>
+        <p>Sets the title of the webpage, which appears in the browser tab.</p>
+    </div>
+    
+    <div class="explanation">
+        <pre class="pre1"><code class="pre2">&lt;style&gt;...&lt;/style&gt;</code></pre>
+        <p>Contains the CSS styles that style the page.</p>
+    </div>
+    
+    <div class="explanation">
+        <pre class="pre1"><code class="pre2">&lt;body&gt;</code></pre>
+        <p>Starts the body section, where the visible content of the page is displayed.</p>
+    </div>
+    
+    <div class="explanation">
+        <pre class="pre1"><code class="pre2">&lt;h1&gt;HTML Code Explanation&lt;/h1&gt;</code></pre>
+        <p>Defines a large heading that will be displayed at the top of the page.</p>
+    </div>
+    
+    <div class="explanation">
+        <pre class="pre1"><code class="pre2">&lt;div id="explanation-container"&gt;&lt;/div&gt;</code></pre>
+        <p>This is the container where the code and explanations will be dynamically displayed.</p>
+    </div>
+    
+    <div class="explanation">
+        <pre class="pre1"><code class="pre2">&lt;script&gt;...&lt;/script&gt;</code></pre>
+        <p>Contains JavaScript that adds the code and explanation dynamically to the page.</p>
+    </div>
+    <p>Look At This Below Code</p>
+
+    <h1>HTML Code Display</h1>
+    <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+<pre><code>&lt;html lang="en"&gt;</code></pre>
+<pre><code>&lt;head&gt;</code></pre>
+<pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+<pre><code>&lt;title&gt;Code Display&lt;/title&gt;</code></pre>
+<pre><code>&lt;/head&gt;</code></pre>
+<pre><code>&lt;body&gt;</code></pre>
+<pre><code>&lt;h1&gt;HTML Code Display&lt;/h1&gt;</code></pre>
+<pre><code>&lt;/body&gt;</code></pre>
+<pre><code>&lt;/html&gt;</code></pre>
+<h1>OUTPUT</h1>
+<div class="image-box">
+<img src="image/Screenshot 2025-02-28 203119.png" height="400px" width="400px">
+</div>
+<p class="chater2_p">If you understand, then let's go to <strong>CHAPTER 2</strong>. Before that, below are different YouTube videos that will help you understand what HTML exactly is. If you don't fully understand HTML yet, go through the resources linked below ⬇️</p>
+
+<div class="links-section">
+    <ul>
+        <li><a href="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">HTML Full Course for Beginners | Learn HTML in 1 Hour - Programming with Mosh</a></li>
+        <li><a href="https://www.youtube.com/watch?v=6JdZczT8Www" target="_blank">Learn HTML in 30 minutes - freeCodeCamp</a></li>
+        <li><a href="https://www.youtube.com/watch?v=RgfUDEk76nE" target="_blank">HTML Tutorial for Beginners | Learn HTML from Scratch | Simplilearn</a></li>
+        <li><a href="https://www.youtube.com/watch?v=KeVLBrl6eHw" target="_blank">HTML Crash Course For Absolute Beginners | Traversy Media</a></li>
+        <li><a href="https://www.youtube.com/watch?v=Q6MvWlrJHx0" target="_blank">HTML Tutorial for Beginners | Learn HTML in 2022 | Tech With Tim</a></li>
+    </ul>
+</div>
+<p>After getting clarity <strong>CHAPTER 1</strong> and HTML meaning to first code of html then go through small exercise question in below section ⬇️</p>
+<img src="image/Screenshot 2025-03-01 161218.png" height="200px" width="200px" class="image_inc">
+<div class="links-container">
+    <h1 class="header11">Practice HTML Coding with These Awesome Platforms!</h1>
+    <p class="header10">Check out the links below and start practicing HTML right away!</p>
+
+    <div class="links">
+        <a href="https://www.w3schools.com/html/" target="_blank" class="link-item">W3Schools</a>
+        <a href="https://www.freecodecamp.org/learn/" target="_blank" class="link-item">freeCodeCamp</a>
+        <a href="https://www.codecademy.com/learn/learn-html" target="_blank" class="link-item">Codecademy</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Introduction" target="_blank" class="link-item">MDN Web Docs</a>
+        <a href="https://www.htmldog.com/guides/" target="_blank" class="link-item">HTML Dog</a>
+        <a href="https://www.sololearn.com/Course/HTML/" target="_blank" class="link-item">SoloLearn</a>
+        <a href="https://exercism.io/tracks/html" target="_blank" class="link-item">Exercism</a>
+    </div>
+</div>
+
+
+
+    
+
+    
+
+
+
+    
+    </body>
+    </html>
+    

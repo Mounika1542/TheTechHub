@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 4: List Types in HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fefefe;
+      padding: 30px;
+      margin: 0;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      border: 2px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fafafa;
+    }
+
+    h2 {
+      color: #2980b9;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .code-box {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      font-family: monospace;
+      border-radius: 5px;
+      white-space: pre-wrap;
+    }
+
+    .preview-box {
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-top: 10px;
+      font-family: sans-serif;
+      border-radius: 8px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      font-family: monospace;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #999;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #219150;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📋 Chapter 4: List Types in HTML</h1>
+
+  <!-- Unordered List -->
+  <div class="section">
+    <h2>1️⃣ Unordered List (`&lt;ul&gt;`)</h2>
+    <p>An unordered list displays items with bullets.</p>
+    <div class="code-box">
+&lt;ul&gt;<br>&nbsp;&nbsp;&lt;li&gt;HTML&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;CSS&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;JavaScript&lt;/li&gt;<br>&lt;/ul&gt;
+    </div>
+    <div class="preview-box">
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Ordered List -->
+  <div class="section">
+    <h2>2️⃣ Ordered List (`&lt;ol&gt;`)</h2>
+    <p>An ordered list displays items with numbers.</p>
+    <div class="code-box">
+&lt;ol&gt;<br>&nbsp;&nbsp;&lt;li&gt;Install VS Code&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;Write HTML&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;Open in browser&lt;/li&gt;<br>&lt;/ol&gt;
+    </div>
+    <div class="preview-box">
+      <ol>
+        <li>Install VS Code</li>
+        <li>Write HTML</li>
+        <li>Open in browser</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Description List -->
+  <div class="section">
+    <h2>3️⃣ Description List (`&lt;dl&gt;`)</h2>
+    <p>A description list contains terms and their definitions.</p>
+    <div class="code-box">
+&lt;dl&gt;<br>&nbsp;&nbsp;&lt;dt&gt;HTML&lt;/dt&gt;<br>&nbsp;&nbsp;&lt;dd&gt;HyperText Markup Language&lt;/dd&gt;<br>&nbsp;&nbsp;&lt;dt&gt;CSS&lt;/dt&gt;<br>&nbsp;&nbsp;&lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;<br>&lt;/dl&gt;
+    </div>
+    <div class="preview-box">
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- Nested List -->
+  <div class="section">
+    <h2>4️⃣ Nested Lists</h2>
+    <p>You can place a list inside another list.</p>
+    <div class="code-box">
+&lt;ul&gt;<br>&nbsp;&nbsp;&lt;li&gt;Fruits<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Apple&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Banana&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>&nbsp;&nbsp;&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;Vegetables<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Carrot&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Spinach&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>&nbsp;&nbsp;&lt;/li&gt;<br>&lt;/ul&gt;
+    </div>
+    <div class="preview-box">
+      <ul>
+        <li>Fruits
+          <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+          </ul>
+        </li>
+        <li>Vegetables
+          <ul>
+            <li>Carrot</li>
+            <li>Spinach</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Practice -->
+  <div class="section">
+    <h2>🧪 Practice: Try It Yourself</h2>
+    <p>Type your own list code and click "Show Preview" to test it!</p>
+    <textarea id="editor" rows="8" placeholder="Example:&#10;&lt;ul&gt;&#10;&nbsp;&nbsp;&lt;li&gt;One&lt;/li&gt;&#10;&nbsp;&nbsp;&lt;li&gt;Two&lt;/li&gt;&#10;&lt;/ul&gt;"></textarea>
+    <br>
+    <button onclick="renderPreview()">Show Preview</button>
+    <button onclick="clearPreview()" style="background-color: #c0392b;">Clear</button>
+    <div class="preview-box" id="live-preview"></div>
+  </div>
+
+  <script>
+    function renderPreview() {
+      const input = document.getElementById('editor').value;
+      document.getElementById('live-preview').innerHTML = input;
+    }
+
+    function clearPreview() {
+      document.getElementById('editor').value = '';
+      document.getElementById('live-preview').innerHTML = '';
+    }
+  </script>
+
+</body>
+</html>
